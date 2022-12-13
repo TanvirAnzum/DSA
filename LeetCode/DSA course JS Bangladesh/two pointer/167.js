@@ -1,0 +1,20 @@
+var twoSum = function (numbers, target) {
+  let i = 0;
+  let j = numbers.length - 1;
+
+  console.log(j);
+  while (i < j) {
+    if (numbers[i] + numbers[j] === target) {
+      return [i + 1, j + 1];
+    } else {
+      if (numbers[i] + numbers[j] > target) {
+        j--;
+      }
+      if (numbers[i] + numbers[j] < target) {
+        i++;
+      }
+    }
+  }
+};
+
+console.log(twoSum([-1, 0], -1));
